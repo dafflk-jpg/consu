@@ -90,7 +90,7 @@ function kirimEmail() {
 
     const emailTujuan = "partner@azharkonsultan.online"; 
     const subjek = "Konsultasi Pajak"; 
-    const isiPesan = "Halo CV. Azhar, saya ingin melakukan konsultasi mengenai..."; 
+    const isiPesan = "Halo Azhar A-Konsultan, saya ingin melakukan konsultasi mengenai..."; 
 
 
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -107,3 +107,4 @@ function kirimEmail() {
         window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${emailTujuan}&su=${subjectEncoded}&body=${bodyEncoded}`, '_blank');
     }
 }
+
