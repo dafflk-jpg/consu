@@ -83,4 +83,27 @@ function openLightbox(imgElement) {
 function closeLightbox() {
     const lightbox = document.getElementById('lightbox');
     if (lightbox) lightbox.style.display = "none";
+
+}
+
+function kirimEmail() {
+
+    const emailTujuan = "partner@azharkonsultan.online"; 
+    const subjek = "Konsultasi Pajak"; 
+    const isiPesan = "Halo CV. Azhar, saya ingin melakukan konsultasi mengenai..."; 
+
+
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+
+    const subjectEncoded = encodeURIComponent(subjek);
+    const bodyEncoded = encodeURIComponent(isiPesan);
+
+    if (isMobile) {
+
+        window.location.href = `mailto:${emailTujuan}?subject=${subjectEncoded}&body=${bodyEncoded}`;
+    } else {
+
+        window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${emailTujuan}&su=${subjectEncoded}&body=${bodyEncoded}`, '_blank');
+    }
 }
