@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ==== HAMBURGER MENU ====
     const hamburgerMenu = document.getElementById('hamburger-menu');
     const navMenu = document.querySelector('.nav-menu');
 
@@ -10,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
             navMenu.classList.toggle('active');
         });
 
-        // Close menu when clicking links
         document.querySelectorAll('.nav-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 hamburgerMenu.classList.remove('active');
@@ -19,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ==== SCROLL REVEAL ANIMATION ====
     const revealElements = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -32,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     revealElements.forEach(el => observer.observe(el));
 
-    // ==== NIGHT MODE ====
     const darkModeToggle = document.getElementById('dark-mode-toggle');
     const body = document.body;
     const moonIcon = '<i class="fas fa-moon"></i>';
@@ -60,7 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// ==== GALERI LOGIC (GLOBAL) ====
 function scrollGallery(direction) {
     const container = document.getElementById('galleryContainer');
     if (container) {
@@ -107,4 +102,5 @@ function kirimEmail() {
         window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${emailTujuan}&su=${subjectEncoded}&body=${bodyEncoded}`, '_blank');
     }
 }
+
 
