@@ -83,7 +83,7 @@ function closeLightbox() {
 
 function kirimEmail() {
 
-    const emailTujuan = "partner@azharkonsultan.online"; 
+    const emailTujuan = "partnerazharkonsultan@gmail.com"; 
     const subjek = "Konsultasi Pajak"; 
     const isiPesan = "Halo Azhar A-Konsultan, saya ingin melakukan konsultasi mengenai..."; 
 
@@ -102,5 +102,6 @@ function kirimEmail() {
         window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${emailTujuan}&su=${subjectEncoded}&body=${bodyEncoded}`, '_blank');
     }
 }
+
 
 
